@@ -17,11 +17,12 @@
             <% tasks.forEach(function(task, index) {%>
                 <form action="/delete" method="POST">
                     <div class="item">
-                    <input type="checkbox" name="position" value="<%= index%>" >
+                    <input type="checkbox">
                 <p><%= task %></p>
-                    <button><ion-icon name="trash"></ion-icon></button>
-            </div>
-            </form>
+                    <button type="submit" name="position" value="<%= index%>"><ion-icon name="trash"></ion-icon></button>
+            
+        </div>
+    </form>
                 <% }) %>
         </ul>
         <form action="/" method="POST" class="item">
